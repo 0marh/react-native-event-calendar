@@ -21,20 +21,31 @@ export default function styleConstructor(theme = {}, calendarHeight) {
       height: 50,
       borderTopWidth: 1,
       borderBottomWidth: 1,
+      // borderTopWidth: 0,
+      // borderBottomWidth: 0,
       borderColor: '#E6E8F0',
-      backgroundColor: '#F5F5F6',
+      // borderColor: 'transparent',
+      // backgroundColor: '#F5F5F6',
+      backgroundColor: 'transparent',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'stretch',
-      ...theme.header,
+      alignItems: 'center',
+      ...theme.header
+    },
+    headerText: {
+      width: "100%",
+      fontSize: 16,
+      color: "blue",
+      textAlign: "center",
+      ...theme.headerText,
     },
     headerTextContainer: {
       justifyContent: 'center',
     },
-    headerText: {
-      fontSize: 16,
-      ...theme.headerText,
-    },
+//     headerText: {
+//       fontSize: 16,
+//       ...theme.headerText,
+//     },
     arrow: {
       width: 15,
       height: 15,
