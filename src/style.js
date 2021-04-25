@@ -28,7 +28,7 @@ export default function styleConstructor(theme = {}, calendarHeight) {
       // backgroundColor: '#F5F5F6',
       backgroundColor: 'transparent',
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: 'center',
       alignItems: 'center',
       ...theme.header
     },
