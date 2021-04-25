@@ -78,16 +78,16 @@ export default class EventCalendar extends React.Component {
     } = this.props;
     const date = moment(initDate).add(index - this.props.size, 'days');
 
-    const leftIcon = this.props.headerIconLeft ? (
-        this.props.headerIconLeft
-    ) : (
-        <Image source={require('./back.png')} style={this.styles.arrow} />
-    );
-    const rightIcon = this.props.headerIconRight ? (
-        this.props.headerIconRight
-    ) : (
-        <Image source={require('./forward.png')} style={this.styles.arrow} />
-    );
+    // const leftIcon = this.props.headerIconLeft ? (
+    //     this.props.headerIconLeft
+    // ) : (
+    //     <Image source={require('./back.png')} style={this.styles.arrow} />
+    // );
+    // const rightIcon = this.props.headerIconRight ? (
+    //     this.props.headerIconRight
+    // ) : (
+    //     <Image source={require('./forward.png')} style={this.styles.arrow} />
+    // );
 
     let headerText = upperCaseHeader
         ? date.format(formatHeader || 'DD MMMM YYYY').toUpperCase()
@@ -96,21 +96,21 @@ export default class EventCalendar extends React.Component {
     return (
       <View style={[this.styles.container, { width }]}>
         <View style={this.styles.header}>
-//           <TouchableOpacity
-//               style={this.styles.arrowButton}
-//               onPress={this._previous}
-//           >
-//             {leftIcon}
-//           </TouchableOpacity>
+           {/* <TouchableOpacity
+              style={this.styles.arrowButton}
+              onPress={this._previous}
+          >
+            {leftIcon}
+          </TouchableOpacity> */}
           <View style={this.styles.headerTextContainer}>
             <Text style={this.styles.headerText}>{headerText}</Text>
           </View>
-//           <TouchableOpacity
-//               style={this.styles.arrowButton}
-//               onPress={this._next}
-//           >
-//             {rightIcon}
-//           </TouchableOpacity>
+          {/* <TouchableOpacity
+              style={this.styles.arrowButton}
+              onPress={this._next}
+          >
+            {rightIcon}
+          </TouchableOpacity> */}
         </View>
         <DayView
           date={date}
